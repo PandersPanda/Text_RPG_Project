@@ -33,8 +33,9 @@ namespace Text_RPG_Project
         public double Gold { get; set; }
 
         public List<IAdventureItem> BackPack { get; set; } = new List<IAdventureItem>();
-
         public List<IAdventureItem> Equiped { get; set; } = new List<IAdventureItem>();
+
+        public IAdventureItem MainHand { get; set; }
         public List<ISpell> SpellsLearned { get; set; } = new List<ISpell>();
         public Player(string name, IGameClass gameClass, IRace race, int gold)
         {
@@ -60,6 +61,10 @@ namespace Text_RPG_Project
                     this.HitPoints += stat.Value;
                     continue;
                 }
+                if (stat.Key == Stats.Str)
+                {
+                    this.Strength += stat.Value;
+                }
                 if (stat.Key == Stats.Int)
                 {
                     this.Intelligence += stat.Value;
@@ -80,6 +85,30 @@ namespace Text_RPG_Project
                     this.Charisma += stat.Value;
                 }
             }
+        }
+
+        public void EquipMainHand(IAdventureItem item)
+        {
+            MainHand = item;
+        }
+
+        public int AttackWithMainHand()
+        {
+            if(MainHand == null) {  return 0; }
+            if(MainHand is not Weapon)
+            {
+                Random random = new Random();
+                return random.Next(1, 5) + (Strength - 10);
+            }
+
+            return AttackWithWeapon((Weapon)MainHand);
+            
+        }
+
+        //Going to expand this later with more stats and randomness
+        public int AttackWithWeapon(Weapon weapon)
+        {
+            return weapon.DamadgeMod + (Strength - 10);
         }
     }
 }
