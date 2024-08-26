@@ -1,0 +1,14 @@
+C:\Users\AHagen\source\repos\Text_RPG_Project\Text_RPG_Project\bin\Debug\net8.0\Text_RPG_Project.exe
+C:\Users\AHagen\source\repos\Text_RPG_Project\Text_RPG_Project\bin\Debug\net8.0\Text_RPG_Project.deps.json
+C:\Users\AHagen\source\repos\Text_RPG_Project\Text_RPG_Project\bin\Debug\net8.0\Text_RPG_Project.runtimeconfig.json
+C:\Users\AHagen\source\repos\Text_RPG_Project\Text_RPG_Project\bin\Debug\net8.0\Text_RPG_Project.dll
+C:\Users\AHagen\source\repos\Text_RPG_Project\Text_RPG_Project\bin\Debug\net8.0\Text_RPG_Project.pdb
+C:\Users\AHagen\source\repos\Text_RPG_Project\Text_RPG_Project\obj\Debug\net8.0\Text_RPG_Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AHagen\source\repos\Text_RPG_Project\Text_RPG_Project\obj\Debug\net8.0\Text_RPG_Project.AssemblyInfoInputs.cache
+C:\Users\AHagen\source\repos\Text_RPG_Project\Text_RPG_Project\obj\Debug\net8.0\Text_RPG_Project.AssemblyInfo.cs
+C:\Users\AHagen\source\repos\Text_RPG_Project\Text_RPG_Project\obj\Debug\net8.0\Text_RPG_Project.csproj.CoreCompileInputs.cache
+C:\Users\AHagen\source\repos\Text_RPG_Project\Text_RPG_Project\obj\Debug\net8.0\Text_RPG_Project.dll
+C:\Users\AHagen\source\repos\Text_RPG_Project\Text_RPG_Project\obj\Debug\net8.0\refint\Text_RPG_Project.dll
+C:\Users\AHagen\source\repos\Text_RPG_Project\Text_RPG_Project\obj\Debug\net8.0\Text_RPG_Project.pdb
+C:\Users\AHagen\source\repos\Text_RPG_Project\Text_RPG_Project\obj\Debug\net8.0\Text_RPG_Project.genruntimeconfig.cache
+C:\Users\AHagen\source\repos\Text_RPG_Project\Text_RPG_Project\obj\Debug\net8.0\ref\Text_RPG_Project.dll

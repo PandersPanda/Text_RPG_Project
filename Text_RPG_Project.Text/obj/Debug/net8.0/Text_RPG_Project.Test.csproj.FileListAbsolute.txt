@@ -1,0 +1,5 @@
+C:\Users\AHagen\source\repos\Text_RPG_Project\Text_RPG_Project.Text\obj\Debug\net8.0\Text_RPG_Project.Test.csproj.AssemblyReference.cache
+C:\Users\AHagen\source\repos\Text_RPG_Project\Text_RPG_Project.Text\obj\Debug\net8.0\Text_RPG_Project.Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AHagen\source\repos\Text_RPG_Project\Text_RPG_Project.Text\obj\Debug\net8.0\Text_RPG_Project.Test.AssemblyInfoInputs.cache
+C:\Users\AHagen\source\repos\Text_RPG_Project\Text_RPG_Project.Text\obj\Debug\net8.0\Text_RPG_Project.Test.AssemblyInfo.cs
+C:\Users\AHagen\source\repos\Text_RPG_Project\Text_RPG_Project.Text\obj\Debug\net8.0\Text_RPG_Project.Test.csproj.CoreCompileInputs.cache
