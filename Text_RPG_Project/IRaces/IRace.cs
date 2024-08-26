@@ -7,7 +7,6 @@ namespace Text_RPG_Project.IRaces
         string Name { get; set; }
         string Description { get; set; }
         Dictionary<Stats, int> StatModifiers { get; set; }
-
         List<ISpell> Spells { get; set; }
 
     }
