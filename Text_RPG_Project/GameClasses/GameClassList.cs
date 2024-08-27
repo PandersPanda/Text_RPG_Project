@@ -20,7 +20,10 @@ namespace Text_RPG_Project.GameClasses
 
                     "Warrior",
                     "A strong and sturdy fighter",
-                    new Dictionary<Stats, int> { { Stats.Str, 2 }, { Stats.HP, 5 } },
+                    new Dictionary<Stats, int> {
+                        { Stats.Str, 2 },
+                        { Stats.HP, 5 } 
+                    },
                     new List<ISpell>()
 
                   ));
