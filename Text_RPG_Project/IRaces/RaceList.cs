@@ -43,5 +43,23 @@ namespace Text_RPG_Project.IRaces
         {
             return _raceList.Find(x => x.Name == name);
         }
+
+        public List<string> GetRaceListNames()
+        {
+            return _raceList.Select(x => x.Name).ToList();
+        }
+        public string ShowRaceList()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"\tRACELIST:");
+            sb.AppendLine($"---------------------");
+
+            foreach (var race in _raceList)
+            {
+                sb.Append($"{race.Name}:\t {race.Description}");
+            }
+
+            return sb.ToString();
+        }
     }
 }

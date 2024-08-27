@@ -53,6 +53,20 @@ namespace Text_RPG_Project.GameClasses
         {
             return _gameClassList.Find(x => x.Name == name);
         }
+
+        public string ShowGameClassList()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"\tCLASSLIST:");
+            sb.AppendLine($"---------------------");
+
+            foreach(var c in _gameClassList)
+            {
+                sb.Append($"{c.Name}:\t {c.Description}");
+            }
+
+            return sb.ToString();
+        }
         
     }
 }
