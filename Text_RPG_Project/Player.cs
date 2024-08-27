@@ -33,9 +33,9 @@ namespace Text_RPG_Project
         public double Gold { get; set; }
 
         public List<IAdventureItem> BackPack { get; set; } = new List<IAdventureItem>();
-        public List<IAdventureItem> Equiped { get; set; } = new List<IAdventureItem>();
+        public List<IAdventureItem> Equipped { get; set; } = new List<IAdventureItem>();
 
-        public IAdventureItem MainHand { get; set; }
+        public IAdventureItem? MainHand { get; set; }
         public List<ISpell> SpellsLearned { get; set; } = new List<ISpell>();
         public Player(string name, IGameClass gameClass, IRace race, int gold)
         {
@@ -64,6 +64,7 @@ namespace Text_RPG_Project
                 if (stat.Key == Stats.Str)
                 {
                     this.Strength += stat.Value;
+                    continue;
                 }
                 if (stat.Key == Stats.Int)
                 {
@@ -87,8 +88,18 @@ namespace Text_RPG_Project
             }
         }
 
+        public void PickUpItem(IAdventureItem item)
+        {
+            //Going to expand this to have a max wheight and size
+            BackPack.Add(item);
+        }
         public void EquipMainHand(IAdventureItem item)
         {
+            if(MainHand is IAdventureItem)
+            {
+                PickUpItem(MainHand);
+            }
+
             MainHand = item;
         }
 
@@ -108,7 +119,20 @@ namespace Text_RPG_Project
         //Going to expand this later with more stats and randomness
         public int AttackWithWeapon(Weapon weapon)
         {
-            return weapon.DamadgeMod + (Strength - 10);
+            if(weapon.Statmodifier == Stats.Str)
+            {
+                return weapon.DamadgeMod + (Strength - 10);
+            }
+            if (weapon.Statmodifier == Stats.Dex)
+            {
+                return weapon.DamadgeMod + (Dexterety - 10);
+            }
+            if (weapon.Statmodifier == Stats.Wis)
+            {
+                return weapon.DamadgeMod + (Wisdom - 10);
+            }
+
+            return weapon.DamadgeMod;
         }
     }
 }

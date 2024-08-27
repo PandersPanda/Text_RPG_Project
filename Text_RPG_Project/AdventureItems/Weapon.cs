@@ -18,13 +18,13 @@ namespace Text_RPG_Project.AdventureItems
 
         public int DamadgeMod { get; set; }
 
-        public Stats Statmodifier { get; set; }
+        public Stats Statmodifier { get; set; } = Stats.Str;
 
         public Weapon(string name, string desc, int wheight, int size, int dmgMod) 
         {
             Name = name;
             Description = desc;
-            Wheight = wheight;
+            Wheight = wheight;  
             Size = size;
             DamadgeMod = dmgMod;
         }
