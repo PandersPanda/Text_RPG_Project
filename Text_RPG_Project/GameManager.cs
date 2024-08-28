@@ -25,24 +25,31 @@ namespace Text_RPG_Project
         private GameClass ChooseGameClass(GameClassList gameClassList)
         {
             bool hasChosenValidClass = false;
-            string classPickedString = string.Empty;
-            while (hasChosenValidClass)
+            string? classPickedString = string.Empty;
+            while (!hasChosenValidClass)
             {
                 string gameClasses = gameClassList.ShowGameClassList();
 
                 Console.WriteLine("Choose a class:");
                 Console.WriteLine(gameClasses);
                 classPickedString = Console.ReadLine();
-
-                if (classPickedString == null)
+               
+                if(classPickedString == null)
                 {
-                    Console.WriteLine("Not a valid class");
+                    Console.WriteLine("Write something");
                     continue;
                 }
+                if (gameClassList.GetClassListNames().Contains(classPickedString))
+                {
+                    hasChosenValidClass = true;
+                    break;
+                }
 
-                hasChosenValidClass = true;
+                Console.WriteLine("Not a valid class");
+                
             }
-            GameClass raceChosen = gameClassList.GetGameClass(classPickedString);
+
+            GameClass? raceChosen = gameClassList.GetGameClass(classPickedString);
             return raceChosen;
         }
 
@@ -50,7 +57,7 @@ namespace Text_RPG_Project
         {
             bool hasChosenValidRace = false;
             string racePickedString = string.Empty;
-            while (hasChosenValidRace)
+            while (!hasChosenValidRace)
             {
                 string races = raceList.ShowRaceList();
 
@@ -58,13 +65,14 @@ namespace Text_RPG_Project
                 Console.WriteLine(races);
                 racePickedString = Console.ReadLine();
 
-                if (racePickedString == null)
+                if (raceList.GetRaceListNames().Contains(racePickedString))
                 {
-                    Console.WriteLine("Not a valid class");
-                    continue;
+                    hasChosenValidRace = true;
+                    break;
                 }
 
-                hasChosenValidRace = true;
+                Console.WriteLine("Not a valid race, pick again");
+                
             }
             Race raceChosen = raceList.GetRace(racePickedString);
             return raceChosen;

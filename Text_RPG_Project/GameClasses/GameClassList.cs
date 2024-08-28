@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Text_RPG_Project.IRaces;
 using Text_RPG_Project.Spells;
 
 namespace Text_RPG_Project.GameClasses
@@ -51,18 +52,21 @@ namespace Text_RPG_Project.GameClasses
 
         public GameClass? GetGameClass(string name)
         {
-            return _gameClassList.Find(x => x.Name == name);
+            return _gameClassList.FirstOrDefault(x => x.Name == name);
         }
-
+        public List<string> GetClassListNames()
+        {
+            return _gameClassList.Select(x => x.Name).ToList();
+        }
         public string ShowGameClassList()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"\tCLASSLIST:");
-            sb.AppendLine($"---------------------");
+            sb.AppendLine($"-----------------------");
 
             foreach(var c in _gameClassList)
             {
-                sb.Append($"{c.Name}:\t {c.Description}");
+                sb.AppendLine($"{c.Name}:\t {c.Description}");
             }
 
             return sb.ToString();

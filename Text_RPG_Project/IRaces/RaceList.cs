@@ -41,7 +41,7 @@ namespace Text_RPG_Project.IRaces
 
         public Race? GetRace(string name)
         {
-            return _raceList.Find(x => x.Name == name);
+            return _raceList.FirstOrDefault(x => x.Name == name);
         }
 
         public List<string> GetRaceListNames()
@@ -52,11 +52,11 @@ namespace Text_RPG_Project.IRaces
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"\tRACELIST:");
-            sb.AppendLine($"---------------------");
+            sb.AppendLine($"-----------------------");
 
             foreach (var race in _raceList)
             {
-                sb.Append($"{race.Name}:\t {race.Description}");
+                sb.AppendLine($"{race.Name}:\t {race.Description}");
             }
 
             return sb.ToString();
